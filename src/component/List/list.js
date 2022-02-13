@@ -1,12 +1,9 @@
 import Items from "../Items/items";
-const List = ({showTodoSending}) => {
+const List = ({showTodoSending, setTodosSending}) => {
     return (
         <div> 
             <ul>
-                {/* {showTodoSending.map((v,i) => {
-                    return <li key={i}> {v} </li>
-                })} */}
-                <Items showTodoSending={showTodoSending} />
+                <Items showTodoSending={showTodoSending} setTodosSending={setTodosSending} />
             </ul>
         </div>
     )

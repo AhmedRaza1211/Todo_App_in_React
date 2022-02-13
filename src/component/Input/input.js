@@ -6,3 +6,5 @@ const Input = ({ val, onInputChangeSending }) => {
         </div>
     )
 }
+
+export default Input;

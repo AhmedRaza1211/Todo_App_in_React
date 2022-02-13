@@ -9,6 +9,7 @@ const Todo = () => {
     const [inputValue, setInputValue] = useState('');
     const onInputChange = (e) => setInputValue(e.target.value);
     const addTodo = () => {
+        (inputValue === '') ? alert('Enter some text here') : 
         setTodos([...todos, inputValue]);
         setInputValue('');
     }
@@ -18,7 +19,7 @@ const Todo = () => {
             <h1> Todo App</h1>
             <Input val={inputValue} onInputChangeSending={onInputChange} />
             <Button onClickSending={addTodo} />
-            <List showTodoSending={todos}/>
+            <List showTodoSending={todos} setTodosSending={setTodos}/>
         </div>
     )
 }
