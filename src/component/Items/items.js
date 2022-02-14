@@ -4,7 +4,13 @@ const Items = ({ showTodoSending, setTodosSending }) => {
         let arr = [...showTodoSending];
         arr.splice(i,1);
         setTodosSending(arr);
+    }
 
+    const editTodo = (i) => {
+        let ques = prompt('Edit your todo here');
+        let arr = [...showTodoSending];
+        arr.splice(i,1,ques);
+        setTodosSending(arr);
     }
 
     return (
@@ -12,6 +18,7 @@ const Items = ({ showTodoSending, setTodosSending }) => {
             {showTodoSending.map((v, i) => {
                 return <li key={i}> {v}
                     <button onClick={(i) => deleteTodo(i)}> Delete </button>
+                    <button onClick={(i) => editTodo(i)}> Edit </button>
                 </li>
             })}
         </div>
